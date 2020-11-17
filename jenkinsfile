@@ -1,0 +1,16 @@
+pipeline{
+   agent any 
+   stages{
+    stage ("multibranch"){
+     steps{
+        echo "this is multibranch pipeline" 
+     
+     }
+     
+    
+    }
+   
+   }
+
+
+}
