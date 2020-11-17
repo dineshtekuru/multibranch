@@ -1,16 +1,35 @@
 pipeline{
    agent any 
    stages{
-    stage ("multibranch"){
+    stage ("deploy to dev"){
+    when{
+    branch "develop"
+    }
      steps{
-        echo "this is multibranch pipeline" 
+        echo "deploy to dev servers" 
      
      }
-     
-    
-    }
-   
    }
+    stage ("deploy to prod"){
+    when{
+    branch "prod"
+    }
+     steps{
+        echo "deploy to prod servers" 
+     
+     }
+   }
+    stage ("deploy to test"){
+    when{
+    branch "test"
+    }
+     steps{
+        echo "deploy to test servers" 
+     
+     }
+   }
+   
+  }
 
 
 }
