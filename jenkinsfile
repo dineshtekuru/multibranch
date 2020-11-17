@@ -10,12 +10,12 @@ pipeline{
      
      }
    }
-    stage ("deploy to prod"){
+    stage ("deploy to release"){
     when{
-    branch "prod"
+    branch "release"
     }
      steps{
-        echo "deploy to prod servers" 
+        echo "deploy to release servers" 
      
      }
    }
