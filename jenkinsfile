@@ -3,7 +3,7 @@ pipeline{
    stages{
     stage ("deploy to dev"){
     when{
-    branch "develop"
+    branch "main"
     }
      steps{
         echo "deploy to dev servers" 
