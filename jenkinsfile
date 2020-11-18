@@ -12,7 +12,7 @@ pipeline{
    }
     stage ("deploy to release"){
     when{
-    branch "release"
+    branch "release "
     }
      steps{
         echo "deploy to release servers" 
